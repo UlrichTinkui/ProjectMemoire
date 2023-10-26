@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>бронирование</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./asset/boostrap.min.css">
+    <script src="./asset/boostrap.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,5 +23,61 @@
         <div class="responsive-menu"></div>
     </header>
     <h1> Reservation</h1>
+
+     <!--  contact section -->
+
+    </form>
+
+</form>
+<section id="contact">
+    <h1 class="title">Контакт</h1>
+    <form action="recup_donnees.php" method="post">
+        <div class="left-right">
+            <div class="left">
+                <label for="name">ИМЯ</label>
+                <input type="text" id="name" name="name"/>
+
+                <label for="object">Объект</label>
+                <input type="text" id="object" name="object"/>
+                
+                <label for="email">электронная почта</label>
+                <input type="email" id="email" name="email"/>
+
+                <label for="message">Сообщение</label>
+                <textarea name="message" id="message"  cols="30" rows="10"></textarea>
+            </div>
+            <div class="right">
+                <label for="numero">Номер телефона</label>
+                <input type="number" id="number" name="number"/>
+
+                <label for="age">дата рождения</label>
+                <input type="date" id="date" name="date"/>
+
+                <label for="pays">Гражданство</label>
+                <input type="text" id="pays" name="pays"/>>
+                
+                <label>Адрес</label>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31759.606304870176!2d10.87642160366122!3d5.720228985075944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10f59942d3ba6c3d%3A0x103c58abee9b6f58!2sFoumban%2C%20Cameroun!5e0!3m2!1sfr!2sru!4v1685344030208!5m2!1sfr!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <input type="submit" value="Отправить" name="Отправить">
+        
+
+    </form>
+</section>
+
+<footer>
+    <p> Режиссер: <span>Ульриш Тинкуи</span> | Все права защищены.</p>
+</footer>
+
+
+<script>
+    var toggle_menu = document.querySelector('.responsive-menu');
+    var menu = document.querySelector('.menu');
+    toggle_menu.onclick= function(){
+         toggle_menu.classList.toggle('active');
+         menu.classList.toggle('responsive')
+    }
+</script>
 </body>
 </html>
