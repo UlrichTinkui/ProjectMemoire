@@ -14,26 +14,31 @@
             {
 
  
-                $NAME = $_POST['name'];
-                $Object = $_POST['object'];
-                $Email = $_POST['email'];
-                $Message = $_POST['message'];
+                $NAME = $_POST['NAME'];
+                $Object = $_POST['Object'];
+                $Passeport = $_POST['passeport'];
+                $Country = $_POST['country'];
+                $dateoftravel = $_POST['date'];
                 $Phonenum = $_POST['number'];
-                $dateofbirth = $_POST['date']; 
-                $Country = $_POST['pays'];
+                $Email = $_POST['Email'];
+                $Message = $_POST['message'];
+                
+                 
+                
 
                 
 
-                $sql = ("INSERT INTO `users` (`NAME`, `Object`, `Email`, `Message`, `Phonenum`, `dateofbirth`, `Country` ) VALUES (:NAME, :Object, :Email, :Message, :Phonenum, :dateofbirth, :Country)"); 
+                $sql = ("INSERT INTO `users` (`NAME`, `Object`, `passeport`, `Country`,  `dateoftravel`, `Phonenum`, `Email`,  `Message` ) VALUES (:NAME, :Object, :passeport, :Country, :dateoftravel, :Phonenum, :Email, Message)"); 
                 $stmt = $conn->prepare($sql);
 
                 $stmt->bindParam(':NAME', $NAME);
                 $stmt->bindParam(':Object', $Object);
+                $stmt->bindParam(':passeport', $Passeport);
+                $stmt->bindParam(':country', $country);
+                $stmt->bindParam(':dateoftravel', $dateoftravel);
+                $stmt->bindParam(':Phonenum', $Phonenum);
                 $stmt->bindParam(':Email', $Email);
                 $stmt->bindParam(':Message', $Message);
-                $stmt->bindParam(':Phonenum', $Phonenum);
-                $stmt->bindParam(':dateofbirth', $dateofbirth);
-                $stmt->bindParam(':Country', $Country);
 
                 
                 
